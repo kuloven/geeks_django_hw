@@ -1,0 +1,18 @@
+{% extends 'main_page.html' %}
+{%load static%}
+
+{% block content %}
+<div class="card" style="width: 18rem;">
+  {% if post.image %}
+  <img src="{{post.image.url}}" class="card-img-top" style="width: 300px; height: 200px" alt="...">
+  {%else%}
+  <img src="{%static 'placeholder-5.png'%}">
+  {%endif %}
+  <div class="card-body">
+      <h5 class="card-title">{{ post.title }}</h5>
+      <p class="card-text">{{ post.content }}</p>
+      <p class="card-text">{{ post.rate }}</p>
+      <a href="#" class="btn btn-primary">0000</a>
+  </div>
+</div>
+{% endblock %}
